@@ -1,0 +1,14 @@
+schema: 'https://graphql-pokemon2.vercel.app'
+documents: './src/queries.gql'
+config:
+  avoidOptionals: true
+  nonOptionalTypename: true
+  namingConvention: keep
+  documentVariableSuffix: ''
+
+generates:
+  ./src/operations.gql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
